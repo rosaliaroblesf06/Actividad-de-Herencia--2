@@ -14,9 +14,25 @@ class Prenda
 
 class Camisa : Prenda
 {
-    public void MostrarTipo()
+    public void TipoCamisa()
     {
         Console.WriteLine("Esta es una camisa.");
+    }
+}
+
+class Pantalon : Prenda
+{
+    public void TipoPantalon()
+    {
+        Console.WriteLine("Este es un pantalón.");
+    }
+}
+
+class Chaqueta : Prenda
+{
+    public void TipoChaqueta()
+    {
+        Console.WriteLine("Esta es una chaqueta.");
     }
 }
 
@@ -29,6 +45,6 @@ class Program
         camisa.precio = 25.50;
 
         camisa.MostrarPrenda();
-        camisa.MostrarTipo();
+        camisa.TipoCamisa();
     }
 }
