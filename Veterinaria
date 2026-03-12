@@ -1,0 +1,31 @@
+using System;
+
+class Animal
+{
+    public string nombre;
+
+    public void Comer()
+    {
+        Console.WriteLine(nombre + " está comiendo.");
+    }
+}
+
+class Perro : Animal
+{
+    public void Ladrar()
+    {
+        Console.WriteLine(nombre + " está ladrando.");
+    }
+}
+
+class Program
+{
+    static void Main()
+    {
+        Perro perro = new Perro();
+        perro.nombre = "Max";
+
+        perro.Comer();
+        perro.Ladrar();
+    }
+}
