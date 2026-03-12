@@ -1,0 +1,34 @@
+using System;
+
+class DiscoVinilo
+{
+    public string artista;
+    public string album;
+
+    public void MostrarInfo()
+    {
+        Console.WriteLine("Artista: " + artista);
+        Console.WriteLine("Álbum: " + album);
+    }
+}
+
+class DiscoRock : DiscoVinilo
+{
+    public void Reproducir()
+    {
+        Console.WriteLine("Reproduciendo disco de rock...");
+    }
+}
+
+class Program
+{
+    static void Main()
+    {
+        DiscoRock disco = new DiscoRock();
+        disco.artista = "Queen";
+        disco.album = "A Night at the Opera";
+
+        disco.MostrarInfo();
+        disco.Reproducir();
+    }
+}
