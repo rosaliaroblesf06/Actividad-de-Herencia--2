@@ -1,0 +1,34 @@
+using System;
+
+class Prenda
+{
+    public string nombre;
+    public double precio;
+
+    public void MostrarPrenda()
+    {
+        Console.WriteLine("Prenda: " + nombre);
+        Console.WriteLine("Precio: $" + precio);
+    }
+}
+
+class Camisa : Prenda
+{
+    public void MostrarTipo()
+    {
+        Console.WriteLine("Esta es una camisa.");
+    }
+}
+
+class Program
+{
+    static void Main()
+    {
+        Camisa camisa = new Camisa();
+        camisa.nombre = "Camisa casual";
+        camisa.precio = 25.50;
+
+        camisa.MostrarPrenda();
+        camisa.MostrarTipo();
+    }
+}
