@@ -6,7 +6,7 @@ class Pizza
 
     public void Preparar()
     {
-        Console.WriteLine("Preparando pizza...");
+        Console.WriteLine("Preparando pizza tamaño " + tamaño);
     }
 }
 
@@ -18,14 +18,30 @@ class PizzaPepperoni : Pizza
     }
 }
 
+class PizzaHawaiana : Pizza
+{
+    public void AgregarPina()
+    {
+        Console.WriteLine("Agregando piña y jamón.");
+    }
+}
+
+class PizzaVegetariana : Pizza
+{
+    public void AgregarVegetales()
+    {
+        Console.WriteLine("Agregando vegetales.");
+    }
+}
+
 class Program
 {
     static void Main()
     {
-        PizzaPepperoni pizza = new PizzaPepperoni();
+        PizzaHawaiana pizza = new PizzaHawaiana();
         pizza.tamaño = "Grande";
 
         pizza.Preparar();
-        pizza.AgregarPepperoni();
+        pizza.AgregarPina();
     }
 }
