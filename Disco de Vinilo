@@ -14,9 +14,25 @@ class DiscoVinilo
 
 class DiscoRock : DiscoVinilo
 {
-    public void Reproducir()
+    public void ReproducirRock()
     {
         Console.WriteLine("Reproduciendo disco de rock...");
+    }
+}
+
+class DiscoJazz : DiscoVinilo
+{
+    public void ReproducirJazz()
+    {
+        Console.WriteLine("Reproduciendo disco de jazz...");
+    }
+}
+
+class DiscoPop : DiscoVinilo
+{
+    public void ReproducirPop()
+    {
+        Console.WriteLine("Reproduciendo disco de pop...");
     }
 }
 
@@ -24,11 +40,10 @@ class Program
 {
     static void Main()
     {
-        DiscoRock disco = new DiscoRock();
-        disco.artista = "Queen";
-        disco.album = "A Night at the Opera";
-
-        disco.MostrarInfo();
-        disco.Reproducir();
+        DiscoRock rock = new DiscoRock();
+        rock.artista = "Queen";
+        rock.album = "A Night at the Opera";
+        rock.MostrarInfo();
+        rock.ReproducirRock();
     }
 }
