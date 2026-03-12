@@ -1,0 +1,51 @@
+using System;
+
+class Producto
+{
+    public string nombre;
+    public double precio;
+
+    public void MostrarProducto()
+    {
+        Console.WriteLine("Producto: " + nombre);
+        Console.WriteLine("Precio: $" + precio);
+    }
+}
+
+class Hamburguesa : Producto
+{
+    public void Preparar()
+    {
+        Console.WriteLine("Preparando hamburguesa...");
+    }
+}
+
+class Bebida : Producto
+{
+    public void Servir()
+    {
+        Console.WriteLine("Sirviendo bebida...");
+    }
+}
+
+class Program
+{
+    static void Main()
+    {
+        Hamburguesa hamburguesa = new Hamburguesa();
+        hamburguesa.nombre = "Hamburguesa clásica";
+        hamburguesa.precio = 5.99;
+
+        hamburguesa.MostrarProducto();
+        hamburguesa.Preparar();
+
+        Console.WriteLine();
+
+        Bebida bebida = new Bebida();
+        bebida.nombre = "Refresco";
+        bebida.precio = 1.99;
+
+        bebida.MostrarProducto();
+        bebida.Servir();
+    }
+}
