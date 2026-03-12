@@ -18,14 +18,30 @@ class Perro : Animal
     }
 }
 
+class Gato : Animal
+{
+    public void Maullar()
+    {
+        Console.WriteLine(nombre + " está maullando.");
+    }
+}
+
+class Conejo : Animal
+{
+    public void Saltar()
+    {
+        Console.WriteLine(nombre + " está saltando.");
+    }
+}
+
 class Program
 {
     static void Main()
     {
-        Perro perro = new Perro();
-        perro.nombre = "Max";
+        Gato gato = new Gato();
+        gato.nombre = "Michi";
 
-        perro.Comer();
-        perro.Ladrar();
+        gato.Comer();
+        gato.Maullar();
     }
 }
