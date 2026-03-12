@@ -1,0 +1,31 @@
+using System;
+
+class Pizza
+{
+    public string tamaño;
+
+    public void Preparar()
+    {
+        Console.WriteLine("Preparando pizza...");
+    }
+}
+
+class PizzaPepperoni : Pizza
+{
+    public void AgregarPepperoni()
+    {
+        Console.WriteLine("Agregando pepperoni.");
+    }
+}
+
+class Program
+{
+    static void Main()
+    {
+        PizzaPepperoni pizza = new PizzaPepperoni();
+        pizza.tamaño = "Grande";
+
+        pizza.Preparar();
+        pizza.AgregarPepperoni();
+    }
+}
